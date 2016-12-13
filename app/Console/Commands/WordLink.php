@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use DB;
+use Illuminate\Console\Command;
 
 class WordLink extends Command
 {
@@ -58,7 +58,7 @@ class WordLink extends Command
                 foreach ($nodes as $node) {
                     $link = [];
                     $link['text'] = $node->title;
-                    $link['url'] = 'http://www.zinch.cn/' . $this->getZinchPath('node/' . $node->nid);
+                    $link['url'] = 'http://www.zinch.cn/'.$this->getZinchPath('node/'.$node->nid);
                     $link['url_title'] = $node->title;
                     $link['except_list'] = '';
                     $links[] = $link;
